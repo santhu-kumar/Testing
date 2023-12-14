@@ -1,0 +1,97 @@
+
+POST method
+******
+
+BODY ---> RAW--->JSON
+
+{
+    "workspace": {
+        "id": "68b46be6-9cd7-471c-837f-39dae936858b",
+        "name": "myworkspaceNew",
+        "type": "team",
+        "description": "This is my workspace for post method"
+        
+    }
+}
+
+
+PUT Method
+******
+{
+    "workspace": {
+        "id": "cbb4bbf3-c5ef-42f2-8c70-7dc4d0aad54b",
+        "name": "myworkspaceNew2",
+        "type": "team",
+        "description": "updated the name for put method"
+    }
+}
+
+PATCH METHODS
+********
+
+GET method 
+request:
+https://jsonplaceholder.typicode.com/posts/2
+
+response:
+{
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+}
+
+
+Patch method
+*******
+request:
+https://jsonplaceholder.typicode.com/posts/2
+
+body
+
+
+{
+
+    "title": "update title"
+
+}
+
+select raw and JSON and not text
+
+*****
+
+Status code:
+***
+https://reqres.in/
+
+404:
+
+https://reqres.in/api/users/23
+
+Another resources
+
+https://reqres.in/api/unknown/23
+
+*****
+
+400 : basd request
+
+https://reqres.in/api/register
+
+{
+    "email": "sydney@fife"
+}
+
+*****
+
+400: bad request login without password
+
+https://reqres.in/api/login
+
+{
+    "email": "peter@klaven"
+}
+
+
+
+

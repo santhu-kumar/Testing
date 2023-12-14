@@ -1,0 +1,66 @@
+PostMan:
+
+https://openweathermap.org/api
+
+Create an Account and loginto it
+
+Click on ApiKeys
+
+Create key--> give a name and generate one key
+
+971444b960152789556f1f377f17eb51
+
+
+Go to Api tab:  https://openweathermap.org/current#name
+
+Copy the api for Built-in API request by city name
+
+https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+In postman:
+
+create a new get request
+
+in Params section change city = london and api key = 971444b960152789556f1f377f17eb51
+
+Click on send request.
+
+respose is 200 ok
+
+================
+
+Go to global variables on left side and create --> environments --> global variable for URL and Api key
+
+And give below details
+
+
+variable = BaseURL
+
+Current Value = https://api.openweathermap.org
+
+Variable = apiKey
+Current value = 971444b960152789556f1f377f17eb51
+
+Save the environment
+
+Now use these variables in Request
+
+1. On top select the environment -> global environment
+
+replave url and api key with variable name
+
+{{BaseURL}}  and {{apiKey}}
+
+
+So the get request will look like this
+
+{{BaseURL}}/data/2.5/weather?q={{city}}&appid={{apiKey}}
+
+The params will be replaced by the variable.
+
+
+
+
+
+
+
